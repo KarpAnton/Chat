@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95d27ff1-01d8-4062-bb3d-ab7da10b1ba3" name="Default" comment="I have added the field SimpleDateFormat in ServerThread class to view message time  of receive.">
+    <list default="true" id="95d27ff1-01d8-4062-bb3d-ab7da10b1ba3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Chatting/server/Server.class" afterPath="$PROJECT_DIR$/out/production/Chatting/server/Server.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Chatting/server/ServerThread.class" afterPath="$PROJECT_DIR$/out/production/Chatting/server/ServerThread.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/ServerThread.java" afterPath="$PROJECT_DIR$/src/server/ServerThread.java" />
     </list>
     <ignored path="Chatting.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -883,12 +884,20 @@
       <workItem from="1494616776384" duration="634000" />
       <workItem from="1494707308725" duration="780000" />
       <workItem from="1494715220175" duration="5000" />
-      <workItem from="1494752273105" duration="1377000" />
+      <workItem from="1494752273105" duration="1489000" />
     </task>
+    <task id="LOCAL-00001" summary="I have added the field SimpleDateFormat in ServerThread class to view message time  of receive.">
+      <created>1494753667219</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1494753667219</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29057000" />
+    <option name="totallyTimeSpent" value="29169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
