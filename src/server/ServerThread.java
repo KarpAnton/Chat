@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by Антон on 07.05.2017.
@@ -15,6 +18,7 @@ public class ServerThread extends Thread {
     private BufferedReader reader;
     private Socket socket;
     private String userName;
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm  yyyy-MM-dd", Locale.getDefault());
 
     public ServerThread(Socket socket){
         this.socket = socket;
@@ -43,16 +47,16 @@ public class ServerThread extends Thread {
         }
         for (ServerThread serverThread : Users.listUsers) {
             if(this!=serverThread)
-                serverThread.getPrintWriter().println(userName + " was come to chat!");
+                serverThread.getPrintWriter().println(dateFormat.format(new Date()) + " : " + userName + " has come to chat!");
         }
         String message;
         try {
             while (true) {
                 message = getReader().readLine();
-                addMessageToQueue(userName + " : " + message);
+                addMessageToQueue(dateFormat.format(new Date()) + " : " + userName + " : " + message);
             for (ServerThread serverThread : Users.listUsers) {
                 if(this!=serverThread)
-                    serverThread.getPrintWriter().println(userName + " : " + message);
+                    serverThread.getPrintWriter().println(dateFormat.format(new Date()) + " : " + userName + " : " + message);
             }
         }
         }catch(IOException e){
@@ -92,13 +96,11 @@ public class ServerThread extends Thread {
      * Sets the user's name
      */
     private void setUserName(){
-
         try {
             userName = reader.readLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     /**
